@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bello - vier Pfoten, viele Talente und ein Garten voller Geschichten.">
+  <title>Bello - Vier Pfoten, viele Geschichten</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Men&uuml; &ouml;ffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="mobile-nav" id="mobile-menu" aria-label="Hauptnavigation">
+    <a href="profil-bello.html">Profil</a>
+    <a href="snacks-bello.html">Lieblingssnacks</a>
+    <a href="faehigkeiten-bello.html">F&auml;higkeiten</a>
+    <a href="ueber-bello.html">&Uuml;ber Bello</a>
+    <a href="galerie-bello.html">Galerie</a>
+    <a href="kontakt-bello.html">Kontakt</a>
+  </nav>
+  <main class="home-shell">
+    <header class="home-hero">
+      <div class="home-hero-copy">
+        <p class="home-kicker">Bello, Berlin</p>
+        <h1>Vier Pfoten.<br><em>Null Langeweile.</em></h1>
+        <p class="home-lead">Ein neugieriger Super-Mix mit einem Talent f&uuml;r Snacks, Abenteuer und gro&szlig;e Auftritte im Garten.</p>
+        <div class="home-actions">
+          <a class="button button-primary" href="profil-bello.html">Bello kennenlernen</a>
+          <a class="text-link" href="galerie-bello.html">Momente ansehen <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="home-hero-art">
+        <div class="art-label">heute im Einsatz<br><strong>Charme</strong></div>
+        <div class="home-portrait"><img src="bello.svg" alt="Bello, ein freundlicher brauner Hund"></div>
+        <span class="art-note">wuff!</span>
+      </div>
+    </header>
+    <section class="home-intro">
+      <p class="home-kicker">Bellos kleine Welt</p>
+      <h2>Alles, was man wissen muss.</h2>
+      <p>Vom Steckbrief bis zur Snack-Rangliste: Hier beginnt die Runde durch Bellos Lieblingsorte.</p>
+    </section>
+    <section class="home-cards" aria-label="Bello entdecken">
+      <a class="home-card card-mint" href="profil-bello.html"><span class="card-number">01</span><span class="card-icon" aria-hidden="true">&#x1F43E;</span><h3>Steckbrief</h3><p>Wer Bello ist, was er liebt und warum Snacks immer helfen.</p><span class="card-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="home-card card-yellow" href="faehigkeiten-bello.html"><span class="card-number">02</span><span class="card-icon" aria-hidden="true">&#x2728;</span><h3>Superkr&auml;fte</h3><p>Schlafen, bellen, losflitzen. Talente mit Charakter.</p><span class="card-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="home-card card-blue" href="snacks-bello.html"><span class="card-number">03</span><span class="card-icon" aria-hidden="true">&#x1F9C0;</span><h3>Snack-Index</h3><p>K&auml;se, Apfel und Keks: die ehrliche Top-Drei.</p><span class="card-arrow" aria-hidden="true">&rarr;</span></a>
+    </section>
+    <footer class="home-footer"><span>Bereit f&uuml;r Streicheleinheiten.</span><span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span></footer>
+  </main>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Men&uuml; schlie&szlig;en' : 'Men&uuml; &ouml;ffnen');
+    });
+  </script>
+</body>
+</html>
